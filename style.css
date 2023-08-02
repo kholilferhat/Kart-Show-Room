@@ -1,0 +1,29 @@
+/* @font-face {
+    font-family: "Manrope";
+    src: url(asset/Inter-VariableFont_slntwght.ttf);
+    font-family: 'Manrope', sans-serif;
+    src: url(url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap'))
+  } */
+
+body {
+    margin: 0;
+}
+nav {
+    display: flex;
+}
+
+h2{
+    font-family: "Manrope";
+    font-weight: 500;
+    color: #000;
+    font-size: 32px;
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+
+  .menuFont{
+    font-family: "Manrope";
+    font-size: 24px;
+    pointer-events: none;
+    color: black;
+  }
