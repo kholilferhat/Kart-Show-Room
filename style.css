@@ -43,6 +43,6 @@ h3{
   .menuFont{
     font-family: "Manrope";
     font-size: 16px;
-    pointer-events: none;
+    /* pointer-events: none; */
     color: black;
   }
