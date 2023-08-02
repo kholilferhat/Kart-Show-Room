@@ -8,11 +8,22 @@
 body {
     margin: 0;
 }
+
 nav {
     display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    padding-right: 30px;
+    padding-left: 30px;
 }
 
-h2{
+.nav-flex{
+    gap: 40px;
+}
+
+
+h3{
     font-family: "Manrope";
     font-weight: 500;
     color: #000;
@@ -21,9 +32,17 @@ h2{
     margin-left: 30px;
   }
 
+  .flex-box{
+    display: flex;
+    gap: 20px;
+}
+.logoImg{
+    height: 30px;
+}
+
   .menuFont{
     font-family: "Manrope";
-    font-size: 24px;
+    font-size: 16px;
     pointer-events: none;
     color: black;
   }
