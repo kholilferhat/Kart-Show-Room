@@ -23,21 +23,21 @@
 
   </head>
   <body style="margin: 0;">
-    <header style="margin: 0;">
+    <header>
       <nav>
-        <div ><img class="logoImg" src="../Asset/Image/mainLogo.svg" alt="ini logo"></div>
+        <div><img class="logoImg" src="../Asset/Image/mainLogo.svg" alt="ini logo" href="../index.html"></div>
         <div class="flex-box">
-            <div href="#" class="menuFont">Home</div>
-            <div href="#" class="menuFont">Products</div>
-            <div href="#" class="menuFont">About</div>
+          <a href="../index.html" class="menuFont">Home</a>
+          <a href="#" class="menuFont">Products</a>
+          <a href="#" class="menuFont">About</a>
         </div>
-        <div class="flex-box" class ="nav-flex" style="align-items: center;">
-            <a href="checkout/checkout.html" ><img src="../Asset/Image/Cart-icon.svg" alt=""></a>
-            <a href="sign-in/signIn.html" class="menuFont">Sign In</a>
-        </div> 
-    
-    </nav>
+        <div class="flex-box" class="nav-flex" style="align-items: center;">
+          <a href="checkout/checkout.html"><img src="../Asset/Image/Cart-icon.svg" alt=""></a>
+          <a href="sign-in/signIn.html" class="menuFont">Sign In</a>
+        </div>
+      </nav>
     </header>
+    
     <!-- <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
@@ -78,21 +78,11 @@
               <small class="text-body-secondary">Brief description</small>
             </div>
             <span class="text-body-secondary">$12</span>
+            <!-- Add the "Add to Cart" button -->
+            <button class="btn btn-primary btn-sm add-to-cart" data-product-id="product-1">Delete</button>
           </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Second product</h6>
-              <small class="text-body-secondary">Brief description</small>
-            </div>
-            <span class="text-body-secondary">$8</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Third item</h6>
-              <small class="text-body-secondary">Brief description</small>
-            </div>
-            <span class="text-body-secondary">$5</span>
-          </li>
+          <!-- Add similar buttons to other products -->
+          <!-- ... -->
           <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
             <div class="text-success">
               <h6 class="my-0">Promo code</h6>
@@ -130,17 +120,6 @@
               <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
               <div class="invalid-feedback">
                 Valid last name is required.
-              </div>
-            </div>
-
-            <div class="col-12">
-              <label for="username" class="form-label">Username</label>
-              <div class="input-group has-validation">
-                <span class="input-group-text">@</span>
-                <input type="text" class="form-control" id="username" placeholder="Username" required>
-              <div class="invalid-feedback">
-                  Your username is required.
-                </div>
               </div>
             </div>
 
@@ -282,4 +261,38 @@
 <script src="../Asset/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="checkout.js"></script></body>
+    <script>
+      // JavaScript function to handle "Add to Cart" button clicks
+      function addToCart(productID) {
+        // Retrieve the product details based on the productID
+        // You can fetch this information from your backend or have a predefined list of products
+        const productName = "Product name";
+        const productPrice = 12;
+    
+        // Retrieve the cart from the localStorage or session storage
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+        // Check if the product is already in the cart
+        const existingProduct = cart.find(item => item.id === productID);
+        if (existingProduct) {
+          existingProduct.quantity += 1;
+        } else {
+          // If the product is not in the cart, add it with a quantity of 1
+          cart.push({ id: productID, name: productName, price: productPrice, quantity: 1 });
+        }
+    
+        // Update the cart in the localStorage or session storage
+        localStorage.setItem('cart', JSON.stringify(cart));
+      }
+    
+      // Attach a click event listener to all "Add to Cart" buttons
+      const addToCartButtons = document.querySelectorAll('.add-to-cart');
+      addToCartButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const productID = button.getAttribute('data-product-id');
+          addToCart(productID);
+          // You can optionally provide user feedback after adding to the cart, e.g., show a notification or update the cart badge.
+        });
+      });
+    </script>
 </html>

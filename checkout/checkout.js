@@ -17,3 +17,27 @@
     }, false)
   })
 })()
+
+
+/** ======================================= */
+
+/** sample coding add , remove item
+ */
+
+// function submitProduct(event) {
+//   event.preventDefault();
+//   const name = document.getElementById("input-name").value;
+//   const price = document.getElementById("input-price").value;
+//   const imageUrl = document.getElementById("input-image").value;
+//   const objProduct = { name, price, imageUrl };
+//   productsArr.push(objProduct);
+//   renderCard();
+//   document.getElementById("form").setAttribute("hidden", true);
+//   document.getElementById("input-name").value = "";
+//   Swal.fire("Berhasil!", "Data berhasil ditambahkan!", "success");
+// }
+
+// function deleteProduct(id) {
+//   productsArr.splice(id, 1);
+//   renderCard();
+// }
