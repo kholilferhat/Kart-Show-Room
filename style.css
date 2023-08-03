@@ -90,7 +90,9 @@ nav {
   z-index: 3;
 
 }
-
+.hidden{
+  display: none;
+}
 .heroContainer{
   margin-left: 5%;
   margin-top: 35%;
@@ -170,6 +172,12 @@ width: 100%;
     /* padding: 90%; */
 }
 
+#footer{
+  display: flex;
+  background-color: black;
+  height: 400px;
+}
+
 .videoContainer{
   display: flex;
   padding: 10rem;
@@ -216,6 +224,22 @@ padding-top: 0%;
     align-content: center;
 }
 
+.added{
+
+  display: relative;
+}
+
+.check-out{
+  right: 105px;
+
+  position: absolute;
+  background-color: red;
+  width: 12px;
+  height: 12px;
+  border: 1px solid red;
+  border-radius: 99999px;
+  z-index: 4;
+}
 .nav-flex{
     gap: 40px;
 }

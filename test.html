@@ -62,6 +62,421 @@
         </div>
     </div>
 
+
+    <div class="productContainer">
+        <div class="productCard-2-row">
+            <div class="productCardImage">
+                <h4 id="productName">Product Name</h4>
+                <img src="https://media.rivian.com/rivian-main/image/upload/f_auto/q_auto:eco,w_1000,c_fit/v1665606408/rivian-com/home%20page/vehicle-picker/R1T-1_i4armg.png"
+                    alt="">
+                <a href="" class="button-Card">Order
+                    Now</a>
+            </div>
+        </div>
+        <div class="productCard-2-row">
+            <div class="productCardImage">
+                <h4 id="productName">Product Name</h4>
+                <img src="https://media.rivian.com/rivian-main/image/upload/f_auto/q_auto:eco,w_1000,c_fit/v1665606408/rivian-com/home%20page/vehicle-picker/R1T-1_i4armg.png"
+                    alt="">
+                <a href="" class="button-Card">Order
+                    Now</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function orderProduct(productNumber) {
+            const productNameElement = document.getElementById(`productName${productNumber}`);
+            const productName = productNameElement.textContent;
+
+            // Replace this alert with the actual logic to handle the order (e.g., redirect to a checkout page)
+            alert(`You have ordered ${productName}!`);
+        }
+    </script>
+
+    <style>
+        /* @font-face {
+    font-family: "Manrope";
+    src: url(asset/Inter-VariableFont_slntwght.ttf);
+    font-family: 'Manrope', sans-serif;
+    src: url(url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap'))
+  } */
+
+        html,
+        body {
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        header {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.05);
+            z-index: 25;
+        }
+
+
+        .button {
+            color: white;
+            font-family: "Manrope";
+            font-size: 16px;
+            font-weight: 400;
+            /* background-color: white; */
+            border: 2px;
+            border-style: solid;
+            border-color: white;
+            padding: 16px;
+            transition: all 0.5s ease;
+            /* stroke: white; */
+        }
+
+        .button:hover {
+            background-color: white;
+            color: black;
+
+        }
+
+        .button-Card {
+            position: absolute;
+            margin-top: 19%;
+            color: black;
+            font-family: "Manrope";
+            font-size: 14px;
+            /* background-color: white; */
+            border: 2px;
+            border-style: solid;
+            border-color: black;
+            padding: 12px;
+            transition: all 0.5s ease;
+            /* stroke: white; */
+        }
+
+        .button-Card:hover {
+            background-color: black;
+            color: white;
+
+        }
+
+
+        .buttonFont {
+            font-family: "Manrope";
+            font-size: 14px;
+            /* pointer-events: none; */
+            color: black;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            height: 80px;
+            align-items: center;
+            padding-right: 30px;
+            padding-left: 30px;
+            border-bottom: 1px solid #efefef;
+            z-index: 3;
+
+        }
+
+        .heroContainer {
+            margin-left: 5%;
+            margin-top: 35%;
+            width: 60%;
+            display: block;
+            transition: all 0.5s ease;
+
+        }
+
+        .subHeader {
+            display: flex;
+            height: 140px;
+            justify-content: left;
+            padding: 10rem;
+        }
+
+        .subHeaderFont {
+            font-family: "Manrope";
+            font-size: 40px;
+            /* pointer-events: none; */
+            color: black;
+        }
+
+
+        .heroFont {
+            font-family: "Manrope";
+            font-size: 48px;
+            font-weight: 400;
+            /* pointer-events: none; */
+            color: white;
+            gap: 20px;
+        }
+
+        /* product Card */
+        .productContainer {
+            display: flex;
+            background-color: white;
+            justify-content: space-between;
+        }
+
+        .productCard-2-row {
+            display: flex;
+            background-color: white;
+            padding: 16px;
+            justify-content: center;
+            width: 100%;
+            /* gap: 16px */
+
+        }
+
+        .productCard-2-row:hover {
+            display: flex;
+            background-color: white;
+            padding: 16px;
+            justify-content: center;
+            width: 120%;
+            transition: all 0.5s ease;
+            /* gap: 16px */
+
+        }
+
+        .productCardImage {
+            /* position: absolute; */
+            display: flex;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 400px;
+            /* height: 120%; */
+            object-fit: scale-down;
+            object-position: 70% 50%;
+            /* border: 1px solid; */
+            justify-content: center;
+            /* background-color: white; */
+            background-color: antiquewhite;
+            transition: all 0.5s ease;
+
+            /* padding: 90%; */
+        }
+
+        #footer {
+            display: flex;
+            background-color: black;
+            height: 400px;
+        }
+
+        .videoContainer {
+            display: flex;
+            padding: 10rem;
+
+        }
+
+        .productCardImage:hover {
+            /* position: absolute; */
+            display: flex;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 400px;
+            /* height: 120%; */
+            object-fit: contain;
+            object-position: 75% 55%;
+            /* border: 1px solid; */
+            justify-content: center;
+            background-color: antiquewhite;
+            transition: all 0.5s ease;
+            /* padding: 90%; */
+        }
+
+        #productName {
+            position: absolute;
+            color: black;
+            opacity: 80%;
+            font-weight: 100;
+            font-size: 40px;
+            padding-top: 0%;
+            font-family: "Manrope";
+            /* font-weight: 800; */
+
+        }
+
+
+
+
+
+
+
+        .menuBox {
+            display: block;
+            height: 80px;
+            align-content: center;
+        }
+
+        .nav-flex {
+            gap: 40px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            display: relative;
+            height: auto;
+
+        }
+
+
+        h3 {
+            font-family: "Manrope";
+            font-weight: 500;
+            color: #000;
+            font-size: 32px;
+            margin-top: 20px;
+            margin-left: 30px;
+        }
+
+        h4 {
+            margin-block-start: 1.5rem;
+        }
+
+        .flex-box {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .logoImg {
+            height: 30px;
+        }
+
+        .menuFont {
+            font-family: "Manrope";
+            font-size: 16px;
+            font-weight: 600;
+            /* pointer-events: none; */
+            color: black;
+        }
+
+        #heroImage {
+            width: 100%;
+            object-fit: cover;
+            height: 90vh;
+
+        }
+
+
+        /*    sign in      */
+
+        .form-signin {
+            max-width: 330px;
+            padding: 1rem;
+        }
+
+        .form-signin .form-floating:focus-within {
+            z-index: 2;
+        }
+
+        .form-signin input[type="email"] {
+            margin-bottom: -1px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        .form-signin input[type="password"] {
+            margin-bottom: 10px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .btn-bd-primary {
+            --bd-violet-bg: #712cf9;
+            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+            --bs-btn-font-weight: 600;
+            --bs-btn-color: var(--bs-white);
+            --bs-btn-bg: var(--bd-violet-bg);
+            --bs-btn-border-color: var(--bd-violet-bg);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: #6528e0;
+            --bs-btn-hover-border-color: #6528e0;
+            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: #5a23c8;
+            --bs-btn-active-border-color: #5a23c8;
+        }
+
+        .bd-mode-toggle {
+            z-index: 1500;
+        }
+    </style>
+
 </body>
 
 </html>
