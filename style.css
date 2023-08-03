@@ -13,18 +13,35 @@ html, body {
 nav {
     position: sticky;
     top: 0;
-    color: white;
+    background-color: white;
     display: flex;
     justify-content: space-between;
     height: 80px;
     align-items: center;
     padding-right: 30px;
     padding-left: 30px;
+    border-bottom: 1px solid #efefef;
+  
 
+}
+.menuBox{
+    display: block;
+    height: 80px;
+    align-content: center;
 }
 
 .nav-flex{
     gap: 40px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    display: relative;
+    height: auto;
+  
 }
 
 
@@ -40,6 +57,7 @@ h3{
   .flex-box{
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 .logoImg{
     height: 30px;
@@ -51,6 +69,14 @@ h3{
     /* pointer-events: none; */
     color: black;
   }
+
+  #heroImage{
+    width: 100%;
+    object-fit: cover;
+    height: 90vh;
+
+}
+  
 
   /*    sign in      */
 
