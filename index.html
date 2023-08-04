@@ -42,9 +42,9 @@
     </nav>
     <div class="container hidden" id="checkout">
         <main>
-            <div class="py-5 text-center">
+            <div class="py-5 text-center fontForm">
                 <!-- <img class="d-block mx-auto mb-4" src="../Asset/Image/mainLogo.svg" alt="" width="150" height="150"> -->
-                <h2>Checkout form</h2>
+                <h2 class="fontForm">Checkout form</h2>
                 <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required
                     form group has a validation state that can be triggered by attempting to submit the form without
                     completing it.</p>
@@ -53,8 +53,9 @@
             <div class="row g-5">
                 <div class="col-md-5 col-lg-4 order-md-last">
                     <h4 class="d-flex justify-content-between align-items-center mb-3">
-                        <span class="text-primary">Your cart</span>
-                        <span class="badge bg-primary rounded-pill" id="value"></span>
+                        <span class="text-primary" style="color: black !important;">Your cart</span>
+                        <span class="badge bg-primary rounded-pill" id="value"
+                            style="background-color: black !important;"></span>
                     </h4>
                     <ul class="list-group mb-3" id="checkOut">
                         <!-- <li class="list-group-item d-flex justify-content-between lh-sm">
@@ -91,12 +92,22 @@
                         </li> -->
                     </ul>
 
-                    <form class="card p-2">
+                    <!-- <form class="card p-2">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Promo code">
                             <button type="submit" class="btn btn-secondary">Redeem</button>
                         </div>
+                    </form> -->
+                    <form class="card p-2">
+                        <div class="input-group">
+                            <!-- <input type="text" class="form-control" placeholder="Promo code">
+                          <button type="submit" class="btn btn-secondary">Redeem</button> -->
+                            <button id="clearCartButton" type="button" class="btn btn-danger" style="background-color: black; border: 0; border-radius: 0
+                                ;">Clear Cart</button>
+                            <!-- New button -->
+                        </div>
                     </form>
+
                 </div>
                 <div class="col-md-7 col-lg-8">
                     <h4 class="mb-3">Billing address</h4>
@@ -255,23 +266,32 @@
 
                         <hr class="my-4">
 
-                        <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+                        <button class="w-100 btn btn-primary btn-lg" type="submit"
+                            style="background-color: black !important; border: 0 !important; box-shadow: 0 !important; border-radius: 0 !important;">Continue
+                            to checkout</button>
                     </form>
                 </div>
             </div>
         </main>
 
-        <footer class="my-5 pt-5 text-body-secondary text-center text-small">
+        <!-- <footer class="my-5 pt-5 text-body-secondary text-center text-small">
             <p class="mb-1">&copy; 2017–2023 Company Name</p>
             <ul class="list-inline">
                 <li class="list-inline-item"><a href="#">Privacy</a></li>
                 <li class="list-inline-item"><a href="#">Terms</a></li>
                 <li class="list-inline-item"><a href="#">Support</a></li>
             </ul>
-        </footer>
+        </footer> -->
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
     </div>
     <div class="" id="home">
-        <section class="container">
+        <section class="containerBody">
             <!-- <h2 style="position: absolute;"> ASDDDD</h2> -->
             <div class='heroContainer' style="position: absolute;">
                 <div class="heroFont" style="display: flex; margin-bottom: 24px;">Driving Innovation: Embrace the Future
@@ -288,27 +308,36 @@
                     alt="">
             </div>
 
-        </section>
 
-        <section>
             <div class="subHeader">
                 <h1 class="subHeaderFont">Efficiency Redefined, Eco-Friendly Future: Embrace Sustainable Driving</h1>
             </div>
             <div class="productContainer" id="productData">
 
             </div>
-        </section>
 
-        <section>
+            <br>
+            <br>
+
             <div class="videoContainer" style="justify-content: center;">
-                <iframe width="900px" height="500px" src="https://www.youtube.com/embed/y881t8ilMyc" frameborder="0"
-                    allowfullscreen></iframe>
-                </iframe>
+                <div class="subHeaderVideo" style="display: block; width: 100% !important;">
+                    <h1 class="subHeaderFont" style="color: white !important;">Browse our exquisite collection of the
+                        world's finest automobiles and elevate your driving experience.
+                    </h1>
+                </div>
+                <div>
+                    <iframe width="800" height="500" src="https://www.youtube.com/embed/SBQlKwZnIFA"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
             </div>
+
+
         </section>
 
-        <footer id="footer">
-            <div style="display: flex; justify-content: right; padding: 8rem; width: 35%;">
+        <footer id="footer" style=" border-top: 1px solid #fefefe;">
+            <div style="display: flex; justify-content: right; padding: 8rem; width: 35%; ">
                 <img src="Asset/Image/mainLogoWhite.svg" alt="ini logo">
             </div>
             <div style="display: flex; justify-content: left; padding: 8rem; width: 35%;">

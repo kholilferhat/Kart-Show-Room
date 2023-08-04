@@ -28,6 +28,9 @@ header:after{
   z-index: 25;
 }
 
+button{
+  background-color: white;
+}
 
 .button{
   color: white;
@@ -76,6 +79,11 @@ color: black;
   /* pointer-events: none; */
   color: black;
 }
+.fontForm{
+  font-family: "Manrope";
+
+}
+
 nav {
     position: sticky;
     top: 0;
@@ -109,6 +117,14 @@ nav {
   padding: 10rem;
 }
 
+.subHeaderVideo{
+  display: flex;
+  height: 140px;
+  justify-content: left;
+  padding: 6rem;
+
+}
+
 .subHeaderFont{
   font-family: "Manrope";
   font-size: 40px;
@@ -116,6 +132,31 @@ nav {
   color: black;
 }
 
+.buttondelete{
+    /* position: absolute; */
+  /* margin-top: 19%; */
+  color: black;
+  font-family: "Manrope";
+  font-size: 14px;
+  font-weight: 600;
+  /* background-color: white; */
+  border: 2px;
+  border-style: solid;
+  border-color: black;
+  padding: 8px;
+  transition: all 0.5s ease;
+}
+
+.buttondelete:hover{
+  /* position: absolute; */
+/* margin-top: 19%; */
+color: white;
+
+background-color: black;
+
+
+transition: all 0.5s ease;
+}
 
 .heroFont {
   font-family: "Manrope";
@@ -172,6 +213,25 @@ width: 100%;
     /* padding: 90%; */
 }
 
+.productCardImage:hover{
+  /* position: absolute; */
+  display: flex;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 400px;
+    /* height: 120%; */
+    object-fit: scale-down;
+    object-position: 70% 50%;
+    /* border: 1px solid; */
+    justify-content: center;
+    /* background-color: white; */
+    background-color: antiquewhite;
+    transition: all 0.5s ease;
+    
+    /* padding: 90%; */
+}
+
 #footer{
   display: flex;
   background-color: black;
@@ -181,6 +241,7 @@ width: 100%;
 .videoContainer{
   display: flex;
   padding: 10rem;
+background-color: black;
 
 }
 .productCardImage:hover{
@@ -206,10 +267,19 @@ width: 100%;
   opacity: 80%;
   font-weight: 100;
   font-size: 40px;
-padding-top: 0%;
+padding-top: 24px;
     font-family: "Manrope";
     /* font-weight: 800; */
    
+}
+.productCardHarga{
+  position:absolute;
+  color: black;
+  opacity: 80%;
+  font-weight: 400;
+  font-size: 30px;
+padding-top: 16.5%;
+    font-family: "Manrope";
 }
 
 
@@ -248,7 +318,7 @@ a{
     text-decoration: none;
 }
 
-.container{
+.containerBody{
     display: relative;
     height: auto;
   
@@ -287,7 +357,7 @@ h3{
   #heroImage{
     width: 100%;
     object-fit: cover;
-    height: 90vh;
+    height: 100vh;
 
 }
   
